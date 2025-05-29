@@ -16,8 +16,6 @@
     <properties>
         <java.version>17</java.version>
         <springdoc.version>2.5.0</springdoc.version>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
     <dependencies>
         <dependency>
@@ -78,9 +76,9 @@
                 <artifactId>maven-checkstyle-plugin</artifactId>
                 <version>3.3.1</version>
                 <configuration>
-                    <configLocation>google_checks.xml</configLocation>
+                    <encoding>UTF-8</encoding>
                     <consoleOutput>true</consoleOutput>
-                    <failsOnError>false</failsOnError>
+                    <failsOnError>false</failsOnError> <!-- Изменено на false, чтобы не прерывать сборку -->
                     <linkXRef>false</linkXRef>
                 </configuration>
                 <executions>
